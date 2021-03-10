@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  X_CMC_PRO_API_KEY: '99492dd6-07bd-4035-8696-90012d8925c5',
+  coinApiKey: 'F526AA36-F0AB-4ED6-B638-BCE73A7885D6',
 };
 
 /*

@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
+import { IData } from '../types/idata';
 
 export enum DataActions {
   loadData = '[Data] Load Data',
@@ -12,7 +13,7 @@ export const loadData = createAction(
 
 export const loadDataSuccess = createAction(
   DataActions.loadDataSuccess,
-  props<{ data: any }>()
+  props<{ data: IData[] }>()
 );
 
 export const loadDataFailure = createAction(

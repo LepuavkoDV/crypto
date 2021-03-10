@@ -2,28 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { IData } from '../types/idata';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  apiUrl = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
-  headers = {
-    'X-CMC_PRO_API_KEY': environment.X_CMC_PRO_API_KEY,
-  };
+  apiUrl = `https://rest.coinapi.io/v1/exchanges?apikey=${environment.coinApiKey}`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getData(): Subject<object> {
-    const {
-      apiUrl,
-      headers,
-    } = this;
-    const data = new Subject<object>();
-    this.http.get(apiUrl, {
-      headers
-    }).subscribe(
-      (res) => data.next(res),
+  getData(): Subject<IData[]> {
+    const { apiUrl } = this;
+    const data = new Subject<IData[]>();
+    this.http.get(apiUrl).subscribe(
+      (res: IData[]) => data.next(res),
       (err) => console.error(err),
     );
     return data;
