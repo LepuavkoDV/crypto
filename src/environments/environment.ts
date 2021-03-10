@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  X_CMC_PRO_API_KEY: '99492dd6-07bd-4035-8696-90012d8925c5',
 };
 
 /*
