@@ -1,5 +1,5 @@
 <div
  *ngFor="let data of (data$ | async)"
 >
-  {{ data | json }}
+  <app-card [data]="data"></app-card>
 </div>

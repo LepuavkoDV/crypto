@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataState } from './reducers/data.reducer';
+import { DataState } from './store/reducers/data.reducer';
 import { Store } from '@ngrx/store';
-import { DataActions } from './actions/data.actions';
+import { DataActions } from './store/actions/data.actions';
 import { Observable } from 'rxjs';
-import { selectData } from './selectors/data.selectors';
+import { selectData } from './store/selectors/data.selectors';
 import { IData } from './types/idata';
 
 @Component({

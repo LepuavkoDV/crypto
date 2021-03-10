@@ -9,8 +9,8 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { environment } from '../environments/environment';
 
-import { reducer as data } from './reducers/data.reducer';
-import { DataEffects } from './effects/data.effects';
+import { reducer as data } from './store/reducers/data.reducer';
+import { DataEffects } from './store/effects/data.effects';
 import { CardComponent } from './components/card/card.component';
 
 @NgModule({

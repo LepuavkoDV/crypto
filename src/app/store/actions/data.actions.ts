@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { IData } from '../types/idata';
+import { IData } from '../../types/idata';
 
 export enum DataActions {
   loadData = '[Data] Load Data',

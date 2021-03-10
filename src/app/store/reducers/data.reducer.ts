@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { IData } from '../types/idata';
+import { IData } from '../../types/idata';
 import { loadDataSuccess } from '../actions/data.actions';
 
 export const dataFeatureKey = 'data';
